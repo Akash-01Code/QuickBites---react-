@@ -5,9 +5,10 @@
   "license": "ISC",
   "author": "Akash",
   "type": "commonjs",
-  "source": "App.js",
+ 
   "scripts": {
     "start": "parcel index.html",
+     "build": "parcel build index.html --public-url ./",
     "test": "jest"
   },
   "devDependencies": {
