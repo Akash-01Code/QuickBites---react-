@@ -31,7 +31,7 @@
     margin: 4px;
     padding: 5px;
     width: 200px;
-   height: 400px;
+  background-color: blanchedalmond;
     
 }
 .res-card:hover{
@@ -51,4 +51,40 @@
     margin: 12px;
     cursor: pointer;
 }
+.shimmer-conatiner{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card{
+    padding: auto;
+    margin: 4px;
+    width: 200px;
+    height: 400px;
+    background-color:blanchedalmond;
+    flex-wrap: wrap;
+}
+.subdiv{
+    height: 50%;
+    width: 100%;
+    background-color:rgb(254, 224, 178);
+}
+
+.login-btn{
+    padding: 0 20px ;
+    cursor: pointer;
+}
+
+.filter{
+    display: flex;
+ justify-content: space-between;
+}
+
+
+
+
+
+
+
+
 /* //res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,2_508,h_320,c_fill/xqwpugnsaf18te7zvtv */
