@@ -19,7 +19,7 @@ const Body = () => {
    }, []);
 
    const fetchData = async () => {
-      const data2 = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9966135&lng=77.5920581&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+      const data2 = await fetch("https://proxy.corsfix.com/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9966135&lng=77.5920581&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
       const json = await data2.json();
 
       console.log(json);
