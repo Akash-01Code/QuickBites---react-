@@ -4,26 +4,25 @@
     "description": "",
     "license": "ISC",
     "author": "Akash",
-    "type": "commonjs",
-   
+    "type": "module",
     "scripts": {
-      "start": "parcel index.html",
-       "build": "parcel build index.html --public-url ./",
-      "test": "jest"
+        "start": "parcel index.html",
+        "build": "parcel build index.html --public-url ./",
+        "test": "jest"
     },
     "devDependencies": {
-      "assert": "^2.1.0",
-      "console-browserify": "^1.2.0",
-      "parcel": "^2.15.4",
-      "util": "^0.12.5"
-      
+        "assert": "^2.1.0",
+        "console-browserify": "^1.2.0",
+        "parcel": "^2.16.0",
+        "process": "^0.11.10",
+        "util": "^0.12.5"
     },
     "dependencies": {
-      "react": "^19.1.1",
-      "react-dom": "^19.1.1"
+        "react": "^19.1.1",
+        "react-dom": "^19.1.1",
+        "react-router-dom": "^6.30.1"
     },
     "browserslist": [
-      "last 2 Chrome version"
+        "last 2 Chrome version"
     ]
-  }
-  
+}

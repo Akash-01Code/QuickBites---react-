@@ -84,7 +84,10 @@
 
 
 
-
+.user-card {
+    padding: 10px;
+    border: 1px solid black;
+}
 
 
 /* //res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,2_508,h_320,c_fill/xqwpugnsaf18te7zvtv */

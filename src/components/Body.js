@@ -1,13 +1,14 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 import resList from "../utils/mockdata";
 
 
 
 
 const Body = () => {
-   //State Variable -- Super powerful variable
+  
 
    const[listOfRestaurants,setListOfRestaurants] = useState([]);
    const[fliteredRestautant,setFilteredRestaurant] = useState([]);
@@ -19,14 +20,14 @@ const Body = () => {
    }, []);
 
    const fetchData = async () => {
-      const data2 = await fetch("https://proxy.corsfix.com/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9966135&lng=77.5920581&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+      const data2 = await fetch("https://corsproxy.io/https://namastedev.com/api/v1/listRestaurants")
       const json = await data2.json();
 
       console.log(json);
-      const {data} = json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
-      setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-      setFilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-      
+      const data = json.data.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      setListOfRestaurants(json?.data.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+      setFilteredRestaurant(json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+      //data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
       
    };
    if(listOfRestaurants.length === 0){
@@ -35,7 +36,9 @@ const Body = () => {
 
 
     return(
+      
      <div className="body">
+     
         <div className="filter">
          <div className="search">
             <input type="text" className="search-box" value={searchText} onChange = {(e) => {
@@ -68,7 +71,7 @@ const Body = () => {
         <div className="res-container">
            {fliteredRestautant.map((item, index) => {
       const info = item?.info;
-      return info ? <RestaurantCard key={item.info.id} resData={{ info }} /> : null;
+      return info ? <Link key={item.info.id} to={"/restaurants/"+item.info.id}><RestaurantCard  resData={{ info }} /> </Link>: null;
     })}
            
          
