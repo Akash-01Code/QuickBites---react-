@@ -1,10 +1,10 @@
 import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer";
-import mockData from "../mockData";
+
 import { useParams } from "react-router-dom";
 
 
-console.log(mockData.data);
+
 
 const RestaurantMenu = () => {
 
@@ -16,9 +16,9 @@ const RestaurantMenu = () => {
     },[]);
 
     const fetchMenu = async () => {
-        const response = await fetch(`https://namastedev.com/api/v1/listRestaurantMenu/${restaurantId}`)
+        const response = await fetch(`https://corsproxy.io/https://namastedev.com/api/v1/listRestaurantMenu/${restaurantId}`)
 
-        //fetch(`https://namastedev.com/api/v1/listRestaurantMenu/${restaurantId}`)
+       
         const json = await response.json();
         setResInfo(json.data);
     };

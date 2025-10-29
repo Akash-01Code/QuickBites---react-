@@ -6,7 +6,6 @@ import { createBrowserRouter, RouterProvider , Outlet } from "react-router-dom";
 import About from "./components/about";
 import Contact from "./components/contact";
 import Error from "./components/Error";
-import resList from "./utils/mockdata";
 import RestaurantMenu from "./components/RestaurantMenu";
 
 
